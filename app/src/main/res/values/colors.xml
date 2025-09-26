@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azulPrincipal">#3A56D4</color>
+    <color name="azulPrincipalDark">#2C41A1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textSecondaryHighContrast">#49454F</color>
+    <color name="NighttextSecondaryHighContrast">#CAC4D0</color>
+</resources>

@@ -1,0 +1,5 @@
+<!-- res/drawable/bg_label_pill.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/azulPrincipal"/>
+    <corners android:radius="10dp"/>
+</shape>

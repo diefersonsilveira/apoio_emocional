@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions_anxiety">
+        <item>Nas últimas semanas, você tem sentido preocupação excessiva?</item>
+        <item>Com que frequência sente aceleração do coração ou falta de ar?</item>
+        <item>Pensamentos acelerados têm atrapalhado seu sono?</item>
+        <item>Situações simples têm parecido ameaçadoras?</item>
+        <item>Você tem evitado atividades por medo do desconforto?</item>
+    </string-array>
+
+    <string-array name="questions_depression">
+        <item>Você tem sentido tristeza ou desânimo na maior parte dos dias?</item>
+        <item>Atividades que antes eram prazerosas perderam o brilho?</item>
+        <item>Como tem estado seu sono e apetite?</item>
+        <item>Tem se sentido cansado(a) ou sem energia?</item>
+        <item>Pensamentos autocríticos têm sido frequentes?</item>
+    </string-array>
+
+    <string-array name="questions_meditation">
+        <item>É fácil para você fazer uma pausa durante o dia?</item>
+        <item>Como você se sente após 2 minutos de respiração consciente?</item>
+        <item>Você consegue notar seu corpo dos pés à cabeça?</item>
+        <item>Pensamentos vêm e vão sem você se prender a eles?</item>
+        <item>Você consegue retornar ao foco quando se distrai?</item>
+    </string-array>
+</resources>

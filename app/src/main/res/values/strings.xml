@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apoio Emocional</string>
+
+    <string name="label_test">Teste</string>
+
+    <string name="btn_logout">Sair</string>
+    <string name="greeting_default">Boa noite,</string>
+
+    <string name="shortcut_care_plans">Planos de cuidados</string>
+    <string name="shortcut_my_sessions">Minhas sessões</string>
+    <string name="shortcut_contents">Conteúdos</string>
+
+    <string name="invites_title">Você recebeu convites</string>
+    <string name="invites_subtitle">Próximas sessões com seu psicólogo(a).</string>
+    <string name="see_invites">Ver convites</string>
+
+    <string name="session_title">Sua sessão está agendada</string>
+    <string name="session_subtitle_demo">Terça, 30/09 • com sua psicóloga</string>
+
+    <string name="tips_title">Dicas rápidas de saúde mental</string>
+    <string name="tip_breathing_478">Respiração 4-7-8</string>
+    <string name="tip_mood_journal">Diário de humor</string>
+    <string name="tip_stretch">Alongar 5 min</string>
+
+    <string name="routine_quiz_title">Feito para sua rotina</string>
+    <string name="anxiety">Ansiedade</string>
+    <string name="depression">Depressão</string>
+    <string name="meditation">Meditação</string>
+    <string name="start">Começar</string>
+
+    <string name="quiz_title_format">Teste • %1$s</string>
+    <string name="quiz_title_placeholder">Teste</string>
+    <string name="quiz_progress_format">Pergunta %1$d de %2$d</string>
+    <string name="quiz_progress_placeholder">Pergunta 1 de 5</string>
+    <string name="question_placeholder">Pergunta aqui</string>
+
+    <string name="option_never">Nunca</string>
+    <string name="option_rarely">Raramente</string>
+    <string name="option_sometimes">Às vezes</string>
+    <string name="option_often">Frequentemente</string>
+
+    <string name="next">Próxima</string>
+    <string name="finish">Concluir</string>
+    <string name="message_placeholder">Mensagem</string>
+
+    <string name="result_thanks_title">Obrigado por responder</string>
+
+    <string name="login_email_hint">E-mail</string>
+    <string name="login_password_hint">Senha</string>
+    <string name="login_enter">Entrar</string>
+    <string name="login_or">ou</string>
+    <string name="login_create_account">Criar nova conta</string>
+
+    <string name="logo_desc">Logomarca do app</string>
+
+    <string name="name">Nome</string>
+
+    <string name="register">Registrar</string>
+    <string name="register_optional_name">Informar nome? (opcional)</string>
+
+    <string name="result_msg_anxiety_html"><![CDATA[
+        <p>Respire com gentileza. A ansiedade passa, mesmo quando parece intensa.</p>
+        <p><b>Técnicas rápidas</b></p>
+        <ul>
+            <li><b>4&#8209;7&#8209;8:</b> inspire 4, segure 7, solte 8 (4×).</li>
+            <li><b>5&#8209;4&#8209;3&#8209;2&#8209;1:</b> 5 coisas que vê, 4 que toca, 3 que ouve, 2 que cheira, 1 que saboreia.</li>
+            <li>Solte ombros e mandíbula e alongue o pescoço por 30s.</li>
+            <li>Anote o pensamento e responda: “posso lidar com um passo de cada vez”.</li>
+        </ul>
+        <p>Se os sintomas forem frequentes ou estiver em crise, procure ajuda profissional ou ligue <b>188 (CVV)</b>.</p>
+    ]]></string>
+
+    <string name="result_msg_depression_html"><![CDATA[
+        <p>Você importa. Seu valor não depende de produtividade.</p>
+        <p><b>Plano curto para agora</b></p>
+        <ul>
+            <li>Levante, beba um copo de água e abra a janela.</li>
+            <li>Tome um banho morno ou lave o rosto.</li>
+            <li>Caminhe por 3–5 minutos, mesmo dentro de casa.</li>
+            <li>Envie uma mensagem para alguém de confiança.</li>
+            <li>Escolha uma micro-meta: arrumar a cama, trocar a roupa ou preparar um lanche.</li>
+        </ul>
+        <p>Se sentir risco, ligue <b>188 (CVV)</b>. Procure acompanhamento profissional se o sofrimento persistir.</p>
+    ]]></string>
+
+    <string name="result_msg_meditation_html"><![CDATA[
+        <p>Parabéns por cuidar de si. Vamos praticar por 2–3 minutos.</p>
+        <p><b>Prática S.T.O.P.</b></p>
+        <ul>
+            <li><b>S:</b> pare por um instante.</li>
+            <li><b>T:</b> tome uma respiração lenta pelo nariz.</li>
+            <li><b>O:</b> observe corpo, emoções e pensamentos, sem julgar.</li>
+            <li><b>P:</b> prossiga com gentileza, escolhendo o próximo passo.</li>
+        </ul>
+        <p><b>Outras opções rápidas</b></p>
+        <ul>
+            <li>Respiração em caixa 4-4-4-4.</li>
+            <li>Varredura corporal dos pés à cabeça por 60s.</li>
+            <li>Mão no peito e frase de bondade: “que eu esteja bem e em segurança”.</li>
+        </ul>
+    ]]></string>
+</resources>
