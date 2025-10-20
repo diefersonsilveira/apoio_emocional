@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.R
 import com.project.apoioemocional.auth.LoginActivity
 import com.project.apoioemocional.quiz.QuizActivity
+import com.project.apoioemocional.content.ConteudosActivity
 import java.util.Calendar
 import java.util.Locale
 
@@ -28,6 +29,10 @@ class HomeActivity : AppCompatActivity() {
         findViewById<MaterialCardView>(R.id.cardQuizAnxiety).setOnClickListener { openQuiz("ansiedade") }
         findViewById<MaterialCardView>(R.id.cardQuizDepression).setOnClickListener { openQuiz("depressao") }
         findViewById<MaterialCardView>(R.id.cardQuizMeditation).setOnClickListener { openQuiz("meditacao") }
+
+        findViewById<MaterialCardView>(R.id.cardShortcutContents).setOnClickListener {
+            startActivity(Intent(this, ConteudosActivity::class.java))
+        }
 
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }
