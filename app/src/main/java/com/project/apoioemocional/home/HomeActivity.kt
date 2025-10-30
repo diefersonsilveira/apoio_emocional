@@ -11,6 +11,7 @@ import com.google.android.material.card.MaterialCardView
 import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.R
 import com.project.apoioemocional.auth.LoginActivity
+import com.project.apoioemocional.chatbot.ChatActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import java.util.Calendar
 import java.util.Locale
@@ -28,6 +29,10 @@ class HomeActivity : AppCompatActivity() {
         findViewById<MaterialCardView>(R.id.cardQuizAnxiety).setOnClickListener { openQuiz("ansiedade") }
         findViewById<MaterialCardView>(R.id.cardQuizDepression).setOnClickListener { openQuiz("depressao") }
         findViewById<MaterialCardView>(R.id.cardQuizMeditation).setOnClickListener { openQuiz("meditacao") }
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.bntChat)
+            .setOnClickListener {
+                startActivity(Intent(this, ChatActivity::class.java))
+            }
 
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }
