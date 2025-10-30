@@ -476,4 +476,17 @@
                 android:layout_height="24dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bntChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/open_chat"
+        android:src="@drawable/ic_chat_24"
+        app:tint="@color/white"
+        app:backgroundTint="@color/azulPrincipalDark"
+        android:layout_gravity="bottom|end"
+        android:elevation="8dp" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
