@@ -47,5 +47,9 @@
             android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <activity android:name=".psychologist.CarePlanActivity"
+            android:exported="false"
+            android:label="Plano de Cuidados"/>
+
     </application>
 </manifest>
