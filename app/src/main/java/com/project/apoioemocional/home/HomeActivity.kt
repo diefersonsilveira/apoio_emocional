@@ -15,7 +15,7 @@ import com.project.apoioemocional.chatbot.ChatActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import java.util.Calendar
 import java.util.Locale
-
+import com.project.apoioemocional.psychologist.CarePlanActivity
 class HomeActivity : AppCompatActivity() {
 
     private val auth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
@@ -33,6 +33,10 @@ class HomeActivity : AppCompatActivity() {
             .setOnClickListener {
                 startActivity(Intent(this, ChatActivity::class.java))
             }
+
+        findViewById<MaterialCardView>(R.id.cardPlanosCuidados)?.setOnClickListener {
+            startActivity(Intent(this, CarePlanActivity::class.java))
+        }
 
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }
