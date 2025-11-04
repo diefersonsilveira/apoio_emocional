@@ -11,6 +11,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.project.apoioemocional.R
+import androidx.appcompat.widget.Toolbar
 
 class CarePlanActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -20,6 +21,18 @@ class CarePlanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_care_plan)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar_care_plan)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.title = "Profissionais de Apoio"
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         recyclerView = findViewById(R.id.recycler_psicologos)
         recyclerView.layoutManager = LinearLayoutManager(this)
