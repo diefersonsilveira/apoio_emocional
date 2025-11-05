@@ -9,10 +9,10 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.project.apoioemocional.R
-
-private const val INHALE_TIME = 4000L
-private const val HOLD_TIME = 7000L
-private const val EXHALE_TIME = 8000L
+import com.google.android.material.appbar.MaterialToolbar
+private const val INHALE_TIME = 5000L
+private const val HOLD_TIME = 8000L
+private const val EXHALE_TIME = 9000L
 
 class BreathingActivity : AppCompatActivity() {
 
@@ -32,15 +32,18 @@ class BreathingActivity : AppCompatActivity() {
         INHALE("Inspire", INHALE_TIME, 1.5f),
         HOLD1("Segure", HOLD_TIME, 1.5f),
         EXHALE("Expire", EXHALE_TIME, 1.0f),
-        HOLD2("Segure (Pausa)", 1000L, 1.0f)
+        HOLD2("Segure (Pausa)", 3000L, 1.0f)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_breathing)
 
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbarBreathing)
+        setSupportActionBar(toolbar)
+
         supportActionBar?.apply {
-            title = "Respiração 4-7-8"
+            title = null
             setDisplayHomeAsUpEnabled(true)
         }
 
