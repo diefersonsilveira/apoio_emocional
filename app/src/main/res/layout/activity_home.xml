@@ -94,6 +94,7 @@
 
                     <!-- Atalho 1 -->
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPlanosCuidados"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
@@ -119,7 +120,8 @@
                                 android:layout_marginTop="6dp"
                                 android:text="@string/shortcut_care_plans"
                                 android:textColor="@color/textSecondaryHighContrast"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:gravity="center_horizontal" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 

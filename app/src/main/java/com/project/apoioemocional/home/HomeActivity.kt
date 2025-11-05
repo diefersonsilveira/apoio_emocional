@@ -11,11 +11,12 @@ import com.google.android.material.card.MaterialCardView
 import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.R
 import com.project.apoioemocional.auth.LoginActivity
+import com.project.apoioemocional.chatbot.ChatActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import com.project.apoioemocional.content.ConteudosActivity
 import java.util.Calendar
 import java.util.Locale
-
+import com.project.apoioemocional.psychologist.CarePlanActivity
 class HomeActivity : AppCompatActivity() {
 
     private val auth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
@@ -29,6 +30,14 @@ class HomeActivity : AppCompatActivity() {
         findViewById<MaterialCardView>(R.id.cardQuizAnxiety).setOnClickListener { openQuiz("ansiedade") }
         findViewById<MaterialCardView>(R.id.cardQuizDepression).setOnClickListener { openQuiz("depressao") }
         findViewById<MaterialCardView>(R.id.cardQuizMeditation).setOnClickListener { openQuiz("meditacao") }
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.bntChat)
+            .setOnClickListener {
+                startActivity(Intent(this, ChatActivity::class.java))
+            }
+
+        findViewById<MaterialCardView>(R.id.cardPlanosCuidados)?.setOnClickListener {
+            startActivity(Intent(this, CarePlanActivity::class.java))
+        }
 
         findViewById<MaterialCardView>(R.id.cardShortcutContents).setOnClickListener {
             startActivity(Intent(this, ConteudosActivity::class.java))
