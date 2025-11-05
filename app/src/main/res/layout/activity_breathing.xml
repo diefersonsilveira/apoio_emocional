@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".BreathingActivity">
+
+    <TextView
+        android:id="@+id/tvInstructionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Instrução"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/azulPrincipal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBreathingAction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Preparar"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/azulPrincipal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvInstructionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <View
+        android:id="@+id/breathingVisualizer"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_circle_breathing"
+        app:layout_constraintTop_toBottomOf="@id/tvBreathingAction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="4"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/breathingVisualizer"
+        app:layout_constraintBottom_toBottomOf="@id/breathingVisualizer"
+        app:layout_constraintStart_toStartOf="@id/breathingVisualizer"
+        app:layout_constraintEnd_toEndOf="@id/breathingVisualizer" />
+
+    <TextView
+        android:id="@+id/tvMethodDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4 segundos: Inspirar \n7 segundos: Segurar \n8 segundos: Expirar"
+        android:textSize="16sp"
+        android:textColor="@color/textSecondaryHighContrast"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btnStartBreathing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartBreathing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Exercício"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/azulPrincipal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
