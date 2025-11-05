@@ -11,6 +11,7 @@ import com.google.android.material.card.MaterialCardView
 import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.R
 import com.project.apoioemocional.auth.LoginActivity
+import com.project.apoioemocional.breathing.BreathingActivity
 import com.project.apoioemocional.chatbot.ChatActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import java.util.Calendar
@@ -36,6 +37,10 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<MaterialCardView>(R.id.cardPlanosCuidados)?.setOnClickListener {
             startActivity(Intent(this, CarePlanActivity::class.java))
+        }
+
+        findViewById<com.google.android.material.chip.Chip>(R.id.chipBreathing478)?.setOnClickListener {
+            startActivity(Intent(this, BreathingActivity::class.java))
         }
 
         val user = auth.currentUser

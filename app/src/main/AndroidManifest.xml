@@ -51,5 +51,10 @@
             android:exported="false"
             android:label="Plano de Cuidados"/>
 
+        <activity
+            android:name=".breathing.BreathingActivity"
+            android:exported="false"
+            android:parentActivityName=".home.HomeActivity" />
+
     </application>
 </manifest>
