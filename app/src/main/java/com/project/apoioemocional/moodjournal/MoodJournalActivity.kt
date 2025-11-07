@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.firebase.auth.FirebaseAuth
@@ -16,16 +17,19 @@ class MoodJournalActivity : AppCompatActivity() {
     private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
 
     enum class Mood(val label: String, val dbValue: Int) {
-        ANGRY("Irritado/Péssimo", 1),
-        SAD("Desanimado/Mal", 2),
-        ANXIOUS("Ansioso/Preocupado", 3),
-        CALM("Neutro/Calmo", 4),
-        HAPPY("Feliz/Excelente", 5)
+        ANGRY("Irritado", 1),
+        SAD("Desanimado", 2),
+        ANXIOUS("Ansioso", 3),
+        CALM("Calmo", 4),
+        HAPPY("Feliz", 5)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mood_journal)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbarMood)
+        setSupportActionBar(toolbar)
 
         supportActionBar?.apply {
             title = null

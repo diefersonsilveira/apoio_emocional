@@ -13,6 +13,7 @@ import com.project.apoioemocional.R
 import com.project.apoioemocional.auth.LoginActivity
 import com.project.apoioemocional.breathing.BreathingActivity
 import com.project.apoioemocional.chatbot.ChatActivity
+import com.project.apoioemocional.moodjournal.MoodJournalActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import java.util.Calendar
 import java.util.Locale
