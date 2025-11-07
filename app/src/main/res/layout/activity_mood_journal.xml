@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".moodjournal.MoodJournalActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Como você está se sentindo agora?"
+        android:textColor="@color/textSecondaryHighContrast"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Toque no emoji que melhor representa seu humor:"
+        android:textColor="@color/textSecondaryHighContrast"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewHistory"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Ver Histórico"
+        app:icon="@android:drawable/ic_menu_today"
+        app:iconTint="@color/azulPrincipal"
+        android:textColor="@color/azulPrincipal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <LinearLayout
+        android:id="@+id/moodContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnViewHistory">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHappy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/btnMoodHappy"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Radiante/Excelente"
+                tools:src="@drawable/ic_mood_happy" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCalm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/btnMoodCalm"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Bom/Calmo"
+                tools:src="@drawable/ic_mood_calm" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAnxious"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/btnMoodAnxious"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Ansioso/Neutro"
+                tools:src="@drawable/ic_mood_anxious" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/btnMoodSad"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Desanimado/Mal"
+                tools:src="@drawable/ic_mood_sad" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAngry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:foreground="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/btnMoodAngry"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Irritado/Péssimo"
+                tools:src="@drawable/ic_mood_angry" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Seu registro será salvo instantaneamente com a data e hora atuais."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moodContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,6 +43,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, BreathingActivity::class.java))
         }
 
+        findViewById<com.google.android.material.chip.Chip>(R.id.chipMoodJournal)?.setOnClickListener {
+            startActivity(Intent(this, MoodJournalActivity::class.java))
+        }
+
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }
             ?: user?.email?.substringBefore("@")
