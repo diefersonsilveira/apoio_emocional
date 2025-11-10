@@ -83,7 +83,6 @@ class MoodJournalActivity : AppCompatActivity() {
 
         moodRef.setValue(moodRecord)
             .addOnSuccessListener {
-                Toast.makeText(this, "Humor registrado como ${mood.label}!", Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener {
