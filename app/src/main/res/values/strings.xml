@@ -100,4 +100,16 @@
             <li>Mão no peito e frase de bondade: “que eu esteja bem e em segurança”.</li>
         </ul>
     ]]></string>
+
+    <!-- STRING ACTIVITY CONTEUDO -->
+    <string name="back">Voltar</string>
+    <string name="contents_title">Conteúdos de Apoio</string>
+    <string name="content_image">Imagem do conteúdo</string>
+    <string name="read_more">Ler mais</string>
+    <string name="watch">Assistir</string>
+
+    <!-- Legendas dos cards do feed -->
+    <string name="content_caption_breathing">Respiração 4-7-8: acalme a mente em 1 minuto com um passo a passo simples.</string>
+    <string name="content_caption_sleep">Higiene do sono: hábitos práticos para dormir melhor hoje.</string>
+    <string name="content_caption_mindfulness">Mindfulness em 2 minutos: presença e gentileza para recomeçar o dia.</string>
 </resources>

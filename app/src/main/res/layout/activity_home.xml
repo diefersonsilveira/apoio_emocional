@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- HEADER -->
             <LinearLayout
                 android:id="@+id/header"
                 android:layout_width="match_parent"
@@ -81,9 +82,9 @@
                         app:layout_constraintEnd_toStartOf="@id/btnLogout"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvGreetingTitle" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <!-- ATALHOS -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
+                    <!-- Atalho 1 -->
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardPlanosCuidados"
                         android:layout_width="0dp"
@@ -123,6 +125,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- Atalho 2 -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="100dp"
@@ -153,11 +156,16 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- Atalho 3: Conteúdos -->
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardShortcutContents"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:layout_marginStart="8dp"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="1dp">
 
@@ -185,6 +193,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- CARD: convites -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -224,6 +233,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- CARD: sessão -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -255,6 +265,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Dicas -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -307,6 +318,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="24dp" />
 
+            <!-- QUIZES (IDs necessários) -->
             <TextView
                 android:id="@+id/tvRoutineTitle"
                 android:layout_width="match_parent"
@@ -331,6 +343,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <!-- ANSIEDADE -->
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardQuizAnxiety"
                         android:layout_width="160dp"
@@ -381,6 +394,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- DEPRESSÃO -->
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardQuizDepression"
                         android:layout_width="160dp"
@@ -431,6 +445,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- MEDITAÇÃO -->
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardQuizMeditation"
                         android:layout_width="160dp"
@@ -479,6 +494,7 @@
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -487,17 +503,4 @@
                 android:layout_height="24dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bntChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:contentDescription="@string/open_chat"
-        android:src="@drawable/ic_chat_24"
-        app:tint="@color/white"
-        app:backgroundTint="@color/azulPrincipalDark"
-        android:layout_gravity="bottom|end"
-        android:elevation="8dp" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
