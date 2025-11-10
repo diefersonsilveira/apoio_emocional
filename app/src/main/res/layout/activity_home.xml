@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:layout_marginEnd="16dp"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/NighttextSecondaryHighContrast"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toStartOf="@id/btnLogout"
                         app:layout_constraintStart_toStartOf="parent"
