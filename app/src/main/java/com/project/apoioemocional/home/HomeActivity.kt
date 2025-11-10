@@ -8,15 +8,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
-import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.R
+import com.google.firebase.auth.FirebaseAuth
 import com.project.apoioemocional.auth.LoginActivity
+import com.project.apoioemocional.breathing.BreathingActivity
 import com.project.apoioemocional.chatbot.ChatActivity
+import com.project.apoioemocional.moodjournal.MoodJournalActivity
 import com.project.apoioemocional.quiz.QuizActivity
 import com.project.apoioemocional.content.ConteudosActivity
 import java.util.Calendar
 import java.util.Locale
 import com.project.apoioemocional.psychologist.CarePlanActivity
+
 class HomeActivity : AppCompatActivity() {
 
     private val auth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
@@ -27,21 +30,39 @@ class HomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
 
-        findViewById<MaterialCardView>(R.id.cardQuizAnxiety).setOnClickListener { openQuiz("ansiedade") }
-        findViewById<MaterialCardView>(R.id.cardQuizDepression).setOnClickListener { openQuiz("depressao") }
-        findViewById<MaterialCardView>(R.id.cardQuizMeditation).setOnClickListener { openQuiz("meditacao") }
+        findViewById<MaterialCardView>(R.id.cardQuizAnxiety)
+            .setOnClickListener { openQuiz("ansiedade") }
+        findViewById<MaterialCardView>(R.id.cardQuizDepression)
+            .setOnClickListener { openQuiz("depressao") }
+        findViewById<MaterialCardView>(R.id.cardQuizMeditation)
+            .setOnClickListener { openQuiz("meditacao") }
+
         findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.bntChat)
             .setOnClickListener {
                 startActivity(Intent(this, ChatActivity::class.java))
             }
 
-        findViewById<MaterialCardView>(R.id.cardPlanosCuidados)?.setOnClickListener {
-            startActivity(Intent(this, CarePlanActivity::class.java))
-        }
+        findViewById<MaterialCardView>(R.id.cardPlanosCuidados)
+            ?.setOnClickListener {
+                startActivity(Intent(this, CarePlanActivity::class.java))
+            }
 
-        findViewById<MaterialCardView>(R.id.cardShortcutContents).setOnClickListener {
-            startActivity(Intent(this, ConteudosActivity::class.java))
-        }
+        // Mantido do branch feat/conteudos
+        findViewById<MaterialCardView>(R.id.cardShortcutContents)
+            ?.setOnClickListener {
+                startActivity(Intent(this, ConteudosActivity::class.java))
+            }
+
+        // Mantido do branch main
+        findViewById<com.google.android.material.chip.Chip>(R.id.chipBreathing478)
+            ?.setOnClickListener {
+                startActivity(Intent(this, BreathingActivity::class.java))
+            }
+
+        findViewById<com.google.android.material.chip.Chip>(R.id.chipMoodJournal)
+            ?.setOnClickListener {
+                startActivity(Intent(this, MoodJournalActivity::class.java))
+            }
 
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }
@@ -49,15 +70,19 @@ class HomeActivity : AppCompatActivity() {
             ?: "amigo(a)"
 
         findViewById<TextView>(R.id.tvGreetingTitle).text = greetingForNow()
-        findViewById<TextView>(R.id.tvGreetingName).text = "${firstName(displayName)} \uD83D\uDC4B"
+        findViewById<TextView>(R.id.tvGreetingName).text =
+            "${firstName(displayName)} \uD83D\uDC4B"
 
-        findViewById<MaterialButton>(R.id.btnLogout)?.setOnClickListener {
-            auth.signOut()
-            startActivity(Intent(this, LoginActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            })
-            finish()
-        }
+        findViewById<MaterialButton>(R.id.btnLogout)
+            ?.setOnClickListener {
+                auth.signOut()
+                startActivity(
+                    Intent(this, LoginActivity::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    }
+                )
+                finish()
+            }
     }
 
     private fun openQuiz(type: String) {
