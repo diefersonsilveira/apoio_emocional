@@ -19,6 +19,7 @@ import com.project.apoioemocional.content.ConteudosActivity
 import java.util.Calendar
 import java.util.Locale
 import com.project.apoioemocional.psychologist.CarePlanActivity
+import com.project.apoioemocional.relaxation.FiveMinuteActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -48,6 +49,9 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<com.google.android.material.chip.Chip>(R.id.chipMoodJournal)
             ?.setOnClickListener { startActivity(Intent(this, MoodJournalActivity::class.java)) }
+
+        findViewById<com.google.android.material.chip.Chip>(R.id.chipStretchFive)
+            ?.setOnClickListener { startActivity(Intent(this, FiveMinuteActivity::class.java)) }
 
         val user = auth.currentUser
         val displayName = user?.displayName?.takeIf { it.isNotBlank() }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".relaxation.FiveMinutePauseActivity">
+    tools:context=".relaxation.FiveMinuteActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarPause"
@@ -14,7 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/azulPrincipal"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Alongamento de 5 Minutos"
+        app:title="Alongamento de 5 minutos"
         app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_arrow_back"
@@ -97,7 +97,7 @@
             android:paddingHorizontal="24dp"
             android:paddingVertical="12dp"
             android:backgroundTint="@color/azulPrincipal"
-            app:cornerRadius="8dp"
+            app:cornerRadius="8dp" />
 
     </LinearLayout>
 

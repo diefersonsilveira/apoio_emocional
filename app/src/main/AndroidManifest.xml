@@ -70,5 +70,10 @@
             android:name=".moodjournal.MoodHistoryActivity"
             android:exported="false"
             android:parentActivityName=".home.HomeActivity" />
+
+        <activity
+            android:name=".relaxation.FiveMinuteActivity"
+            android:exported="false"
+            android:parentActivityName=".home.HomeActivity" />
     </application>
 </manifest>
